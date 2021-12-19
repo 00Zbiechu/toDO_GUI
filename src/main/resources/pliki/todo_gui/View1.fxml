@@ -11,6 +11,6 @@
       <Separator layoutX="149.0" layoutY="77.0" prefWidth="200.0" />
       <TextField layoutX="164.0" layoutY="136.0" />
       <Text layoutX="115.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Podaj swoje imię użytkowniku" textAlignment="CENTER" wrappingWidth="268.0" />
-      <Button layoutX="208.0" layoutY="214.0" mnemonicParsing="false" text="Potwierdź" />
+      <Button layoutX="208.0" layoutY="214.0" mnemonicParsing="false" onAction="#text" text="Potwierdź" />
    </children>
 </AnchorPane>
