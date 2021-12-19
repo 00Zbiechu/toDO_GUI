@@ -12,20 +12,23 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) throws IOException {
 
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("View1.fxml"));
-        Scene scene = new Scene(fxmlLoader.load());
-        stage.setTitle("toDO");
-        stage.setScene(scene);
-        stage.show();
+        try {
+
+            FXMLLoader fxmlLoader = new FXMLLoader(this.getClass().getResource("View1.fxml"));
+            Scene scene = new Scene(fxmlLoader.load());
+            stage.setScene(scene);
+            stage.setTitle("toDO");
+            stage.setResizable(false);
+            stage.show();
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     public static void main(String[] args) {
 
         launch();
-
-
-
-
 
     }
 
