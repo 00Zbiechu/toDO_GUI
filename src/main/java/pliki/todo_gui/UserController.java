@@ -6,7 +6,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 
 import javafx.scene.Node;
-import javafx.scene.control.Label;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.scene.Parent;
@@ -20,13 +20,20 @@ public class UserController {
 
     @FXML
     TextField userName;
-    Label errorCode;
+
+    @FXML
+    Text message;
 
 
     public void confirmTheName(ActionEvent event) throws IOException {
 
         String name = userName.getText();
 
+        if(name.length()>20){
+
+            message.setText("Nazwa użytkownika powinna mieć maksymalnie 20 znaków");
+
+        }else{
 
             FXMLLoader loader = new FXMLLoader(getClass().getResource("View2.fxml"));
             Parent root = loader.load();
@@ -40,7 +47,7 @@ public class UserController {
             stage.setScene(scene);
             stage.show();
 
-
+        }
 
 
     }
