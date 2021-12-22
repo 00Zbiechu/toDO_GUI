@@ -5,18 +5,18 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-import java.io.IOException;
 
 public class Main extends Application {
 
     @Override
-    public void start(Stage stage) throws IOException {
+    public void start(Stage stage){
 
         try {
 
-            FXMLLoader fxmlLoader = new FXMLLoader(this.getClass().getResource("View1.fxml"));
-            Scene scene = new Scene(fxmlLoader.load());
+            FXMLLoader loader = new FXMLLoader(this.getClass().getResource("ViewUsername.fxml"));
+            Scene scene = new Scene(loader.load());
             stage.setScene(scene);
+
             stage.setTitle("toDO");
             stage.setResizable(false);
             stage.show();

@@ -1,13 +1,11 @@
 package pliki.todo_gui;
 
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.DatePicker;
 import javafx.scene.text.Text;
 import java.time.LocalDate;
 
-import java.io.IOException;
 
 
 public class DateController {
@@ -22,7 +20,7 @@ public class DateController {
         nameOfUser.setText(username);
     }
 
-    public void confirmDate(ActionEvent event) throws IOException{
+    public void confirmDate(){
 
             LocalDate myDate = chooseDate.getValue();
             System.out.println(myDate);
