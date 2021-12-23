@@ -16,39 +16,60 @@ import javafx.scene.text.Text;
 
 public class UserController {
 
+    //FXML
     @FXML
     TextField userName;
 
     @FXML
     Text message;
 
-    Stage stage;
-    Scene scene;
-    Parent root;
-    Node node;
+    //GUI
+        Stage stage;
+        //Must be created, to be closed if user will write correct answer
+        Stage forErrorStage = new Stage();
+        Scene scene;
+        Parent root;
+        Node node;
+
+    //Var
+    String name;
+
+
+    public void setUserName(String nameOfUser){
+        name=nameOfUser;
+    }
+
+
+
+    public String getUserName(){
+        return  name;
+    }
+
+
 
 
     public void confirmTheName(ActionEvent event) throws IOException {
 
-        String name = userName.getText();
+       setUserName(userName.getText());
 
         if(name.length()>20){
 
             FXMLLoader loader = new FXMLLoader(getClass().getResource("ViewFail.fxml"));
             root = loader.load();
             scene = new Scene(root);
-            Stage stage = new Stage();
-            stage.setScene(scene);
-            stage.setResizable(false);
-            stage.setTitle("Błąd");
-            stage.setAlwaysOnTop(true);
-            stage.show();
+            forErrorStage.setScene(scene);
+                forErrorStage.setResizable(false);
+                forErrorStage.setTitle("Błąd");
+                forErrorStage.setAlwaysOnTop(true);
+            forErrorStage.show();
 
             FailController failController = loader.getController();
             failController.reasonOfFail("Zbyt długa nazwa użytkownika [max 20 znaków]");
 
 
         }else{
+
+            forErrorStage.close();
 
             FXMLLoader loader = new FXMLLoader(getClass().getResource("ViewDate.fxml"));
             root = loader.load();
@@ -65,6 +86,8 @@ public class UserController {
 
 
     }
+
+
 
 
 

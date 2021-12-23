@@ -16,9 +16,8 @@ public class Main extends Application {
             FXMLLoader loader = new FXMLLoader(this.getClass().getResource("ViewUsername.fxml"));
             Scene scene = new Scene(loader.load());
             stage.setScene(scene);
-
-            stage.setTitle("toDO");
-            stage.setResizable(false);
+                stage.setTitle("toDO");
+                stage.setResizable(false);
             stage.show();
 
         }catch (Exception e){
