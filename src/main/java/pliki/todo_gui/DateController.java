@@ -1,18 +1,19 @@
 package pliki.todo_gui;
 
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.DatePicker;
-import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
+
 import java.io.IOException;
+import javafx.scene.control.DatePicker;
 import java.time.LocalDate;
+import javafx.scene.text.Text;
 
 
 public class DateController {
@@ -36,6 +37,7 @@ public class DateController {
 
 
 
+
     public void displayName(String username){
         nameOfUser.setText(username);
     }
@@ -47,18 +49,32 @@ public class DateController {
     }
 
 
-
     public LocalDate getDate(){
         return chooseDate.getValue();
     }
 
 
+    public boolean validator(LocalDate date){
+
+       try {
+               if (date.toString().matches("[0-9]{4}[-][0-9]{2}[-][0-9]{2}")){
+                   setDate(date);
+                   return true;
+               } else {
+                   return false;
+               }
+       }catch(Exception e){
+           return false;
+       }
+
+    }
 
 
     public void confirmDate(ActionEvent event) throws IOException {
 
-        setDate(chooseDate.getValue());
+        if(validator(chooseDate.getValue())){
 
+            forErrorStage.close();
 
             FXMLLoader loader = new FXMLLoader(getClass().getResource("ViewMenu.fxml"));
             root = loader.load();
@@ -69,10 +85,28 @@ public class DateController {
             stage.show();
 
             MenuController menuController = loader.getController();
-            menuController.setWelcome(nameOfUser.getText(),date);
+            menuController.setWelcome(nameOfUser.getText(), date);
 
+        }else{
+
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("ViewFail.fxml"));
+            root = loader.load();
+            scene = new Scene(root);
+            forErrorStage.setScene(scene);
+                forErrorStage.setResizable(false);
+                forErrorStage.setTitle("Błąd");
+                forErrorStage.setAlwaysOnTop(true);
+            forErrorStage.show();
+
+            FailController failController = loader.getController();
+            failController.reasonOfFail("Zły format daty, spróbuj użyć menu kalendarza");
+
+        }
 
 
     }
 
 }
+
+
+
