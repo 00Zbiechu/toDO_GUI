@@ -1,17 +1,18 @@
 package pliki.todo_gui;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+
 
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import javafx.event.ActionEvent;
 import java.io.IOException;
+
 import javafx.scene.control.TextField;
-import javafx.scene.text.Text;
 
 
 public class UserController {
@@ -20,8 +21,6 @@ public class UserController {
     @FXML
     TextField userName;
 
-    @FXML
-    Text message;
 
     //GUI
         Stage stage;
@@ -35,11 +34,10 @@ public class UserController {
     String name;
 
 
+    //Set & GET
     public void setUserName(String nameOfUser){
         name=nameOfUser;
     }
-
-
 
     public String getUserName(){
         return  name;

@@ -1,19 +1,22 @@
 package pliki.todo_gui;
 
-import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.FXML;
+
+
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-
+import javafx.event.ActionEvent;
 import java.io.IOException;
+
+
 import javafx.scene.control.DatePicker;
-import java.time.LocalDate;
 import javafx.scene.text.Text;
+import java.time.LocalDate;
 
 
 public class DateController {
@@ -42,12 +45,10 @@ public class DateController {
         nameOfUser.setText(username);
     }
 
-
-
+    //Set & GET
     public void setDate(LocalDate dateOfActivity){
         date = dateOfActivity;
     }
-
 
     public LocalDate getDate(){
         return chooseDate.getValue();
@@ -84,8 +85,10 @@ public class DateController {
             stage.setScene(scene);
             stage.show();
 
-            MenuController menuController = loader.getController();
+            ActivityController menuController = loader.getController();
             menuController.setWelcome(nameOfUser.getText(), date);
+            menuController.createEmptyList();
+            menuController.showActions();
 
         }else{
 
