@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -23,6 +24,9 @@ public class ActivityController {
 
     @FXML
     TextArea activityList;
+
+    @FXML
+    Label message;
 
 
     //GUI
@@ -74,6 +78,8 @@ public class ActivityController {
     //ADD Scene
     public void switchAdd() throws IOException {
 
+        message.setText("");
+
         FXMLLoader loader = new FXMLLoader(getClass().getResource("ViewAdd.fxml"));
         root = loader.load();
         scene = new Scene(root);
@@ -91,11 +97,45 @@ public class ActivityController {
 
 
     //Set & Get
-    //Test
     public void addNewAction(String newActions, String newHour, String newMinute){
-        actions[currentAction]=("["+currentAction+"] "+newActions+" ["+newHour+":"+newMinute+"]");
-        addToCurrentAction();
+        if(currentAction<10){
+            actions[currentAction]=("["+currentAction+"] "+newActions+" ["+newHour+":"+newMinute+"]");
+            addToCurrentAction();
+        }else{
+            message.setText("Maksymalna liczba operacji do dodania [10]");
+        }
     }
+
+
+
+
+    //Edit Scene
+    public void switchEdit() throws IOException {
+
+        message.setText("");
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("ViewEdit.fxml"));
+        root = loader.load();
+        scene = new Scene(root);
+        newStage.setScene(scene);
+            newStage.setResizable(false);
+            newStage.setTitle("Edytuj aktywność");
+            newStage.setAlwaysOnTop(true);
+        newStage.showAndWait();
+
+    }
+
+    //Set & Get
+    public void editNewAction(byte number, String newActions, String newHour, String newMinute){
+        if(number>-1 && number<10){
+            actions[number]=("["+number+"] "+newActions+" ["+newHour+":"+newMinute+"]");
+        }else{
+            message.setText("Nr wykracza poza zakres zadań [0-9]");
+        }
+    }
+
+
+
 
     public String[] getActions(){
         return actions;

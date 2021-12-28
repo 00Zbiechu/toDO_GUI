@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="237.0" prefWidth="379.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pliki.todo_gui.EditController">
+   <children>
+      <Label alignment="CENTER" layoutY="23.0" prefHeight="16.0" prefWidth="379.0" text="Wprwoadź numer akcji do edycji oraz nowe dane" />
+      <Separator layoutX="90.0" layoutY="56.0" prefWidth="200.0" />
+      <Label fx:id="message" alignment="CENTER" contentDisplay="CENTER" layoutX="11.0" layoutY="83.0" prefHeight="16.0" prefWidth="378.0" textFill="RED" />
+      <Text layoutX="101.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Treść [20 znaków]">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Text>
+      <Text layoutX="254.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Czas [0-23] : [0-59]">
+         <font>
+            <Font size="12.0" />
+         </font>
+      </Text>
+      <TextField fx:id="content" layoutX="67.0" layoutY="144.0" prefHeight="24.0" prefWidth="179.0" />
+      <TextField fx:id="hour" layoutX="258.0" layoutY="144.0" prefHeight="24.0" prefWidth="48.0" />
+      <TextField fx:id="minutes" layoutX="323.0" layoutY="144.0" prefHeight="24.0" prefWidth="48.0" />
+      <Button layoutX="171.0" layoutY="194.0" mnemonicParsing="false" text="Edytuj" />
+      <Text layoutX="312.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text=":" />
+      <TextField fx:id="numberOfAction" layoutX="14.0" layoutY="144.0" prefHeight="24.0" prefWidth="48.0" />
+      <Text layoutX="13.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nr akcji" />
+   </children>
+</AnchorPane>
