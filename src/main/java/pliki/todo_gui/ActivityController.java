@@ -121,7 +121,12 @@ public class ActivityController {
             newStage.setResizable(false);
             newStage.setTitle("Edytuj aktywność");
             newStage.setAlwaysOnTop(true);
+                EditController editController = loader.getController();
+                loader.setController(editController);
         newStage.showAndWait();
+                editNewAction(editController.getEditNumber(),editController.getEditActionContent(),editController.getEditActionHour(),editController.getEditActionMinutes());
+                clearList();
+                showActions();
 
     }
 

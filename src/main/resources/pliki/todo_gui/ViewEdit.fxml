@@ -8,7 +8,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane prefHeight="237.0" prefWidth="379.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pliki.todo_gui.EditController">
    <children>
       <Label alignment="CENTER" layoutY="23.0" prefHeight="16.0" prefWidth="379.0" text="Wprwoadź numer akcji do edycji oraz nowe dane" />
@@ -27,7 +26,7 @@
       <TextField fx:id="content" layoutX="67.0" layoutY="144.0" prefHeight="24.0" prefWidth="179.0" />
       <TextField fx:id="hour" layoutX="258.0" layoutY="144.0" prefHeight="24.0" prefWidth="48.0" />
       <TextField fx:id="minutes" layoutX="323.0" layoutY="144.0" prefHeight="24.0" prefWidth="48.0" />
-      <Button layoutX="171.0" layoutY="194.0" mnemonicParsing="false" text="Edytuj" />
+      <Button layoutX="171.0" layoutY="194.0" mnemonicParsing="false" onAction="#editAction" text="Edytuj" />
       <Text layoutX="312.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text=":" />
       <TextField fx:id="numberOfAction" layoutX="14.0" layoutY="144.0" prefHeight="24.0" prefWidth="48.0" />
       <Text layoutX="13.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nr akcji" />

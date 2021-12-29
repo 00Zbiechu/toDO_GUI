@@ -62,7 +62,7 @@ public class UserController {
             forErrorStage.show();
 
             FailController failController = loader.getController();
-            failController.reasonOfFail("Zbyt długa lub zbyt krótka nazwa użytkownika [max 20 znaków]");
+            failController.reasonOfFail("Zbyt długa/krótka nazwa użytkownika [max 20 znaków]");
 
 
         }else{

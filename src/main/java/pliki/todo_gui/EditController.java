@@ -4,8 +4,10 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 
 
+import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 
 public class EditController {
@@ -27,18 +29,23 @@ public class EditController {
     Label message;
 
 
+    //GUI
+    Stage stage;
+    Node node;
+
+
     //Var
-    String editNumber;
+    byte editNumber;
     String editActionContent;
     String editActionHour;
     String editActionMinutes;
 
 
     //Number SET & GET
-    public void setEditNumber(String editNumber){
+    public void setEditNumber(byte editNumber){
         this.editNumber=editNumber;
     }
-    public String getEditNumber() {return editNumber;}
+    public byte getEditNumber() {return editNumber;}
 
     //Content SET & GET
     public void setEditActionContent(String contentOfAction){
@@ -63,6 +70,45 @@ public class EditController {
 
     public void editAction(ActionEvent event){
 
+        try {
+
+                if(Integer.parseInt(numberOfAction.getText())>-1 && Integer.parseInt(numberOfAction.getText())<10) {
+                    setEditNumber((byte) Integer.parseInt(numberOfAction.getText()));
+
+                    if ((content.getText().length()) < 20 && content.getText().length() > 0) {
+                        setEditActionContent(content.getText());
+
+                        if (Integer.parseInt(hour.getText()) < 24 && Integer.parseInt(hour.getText()) > 0 && hour.getText().length() > 0) {
+                            setEditActionHour(hour.getText());
+
+                            if (Integer.parseInt(minutes.getText()) > -1 && Integer.parseInt(minutes.getText()) < 60 && minutes.getText().length() > 0) {
+                                setEditActionMinutes(minutes.getText());
+
+
+                                node = (Node) event.getSource();
+                                stage = (Stage) node.getScene().getWindow();
+                                stage.close();
+
+
+                            } else {
+                                message.setText("Minuty nie mieszczą się w zakresie");
+                            }
+
+                        } else {
+                            message.setText("Godzina nie mieści się w zakresie");
+                        }
+
+                    } else {
+                        message.setText("Treść zawiera nieprzepisową ilość znaków");
+                    }
+
+                } else {
+                    message.setText("Numer akcji musi się mieścić w zakresie [0-9]");
+                }
+
+        }catch (Exception e){
+            message.setText("Coś poszło nie tak...");
+        }
 
 
     }
