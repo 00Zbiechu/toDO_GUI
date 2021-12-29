@@ -96,7 +96,7 @@ public class ActivityController {
     }
 
 
-    //Set & Get
+    //Set add
     public void addNewAction(String newActions, String newHour, String newMinute){
         if(currentAction<10){
             actions[currentAction]=("["+currentAction+"] "+newActions+" ["+newHour+":"+newMinute+"]");
@@ -130,10 +130,45 @@ public class ActivityController {
 
     }
 
-    //Set & Get
+    //Set edit
     public void editNewAction(byte number, String newActions, String newHour, String newMinute){
         if(number>-1 && number<10){
             actions[number]=("["+number+"] "+newActions+" ["+newHour+":"+newMinute+"]");
+        }else{
+            message.setText("Nr wykracza poza zakres zadań [0-9]");
+        }
+    }
+
+
+
+
+
+
+    //Delete Scene
+    public void switchDelete() throws IOException {
+
+        message.setText("");
+
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("ViewDelete.fxml"));
+        root = loader.load();
+        scene = new Scene(root);
+        newStage.setScene(scene);
+            newStage.setResizable(false);
+            newStage.setTitle("Usuń aktywność");
+            newStage.setAlwaysOnTop(true);
+                DeleteController deleteController = loader.getController();
+                loader.setController(deleteController);
+        newStage.showAndWait();
+                deleteNewAction(deleteController.getDeleteNumber());
+                clearList();
+                showActions();
+
+    }
+
+    //Set delete
+    public void deleteNewAction(byte number){
+        if(number>-1 && number<10){
+            actions[number]=("["+number+"] ---------- [0:0]");
         }else{
             message.setText("Nr wykracza poza zakres zadań [0-9]");
         }

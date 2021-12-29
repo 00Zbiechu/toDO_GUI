@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="237.0" prefWidth="378.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pliki.todo_gui.DeleteController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="48.0" layoutY="33.0" prefHeight="16.0" prefWidth="297.0" text="Wprowadź numer aktywności do usunięcia" />
+      <Separator layoutX="106.0" layoutY="62.0" prefWidth="200.0" />
+      <Label fx:id="message" alignment="CENTER" contentDisplay="CENTER" layoutY="83.0" prefHeight="16.0" prefWidth="378.0" textFill="RED" />
+      <Text layoutX="171.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nr [0-9]" />
+      <TextField fx:id="numberToDelete" layoutX="174.0" layoutY="140.0" onAction="#deleteAction" prefHeight="24.0" prefWidth="45.0" />
+      <Button layoutX="171.0" layoutY="194.0" mnemonicParsing="false" onAction="#deleteAction" text="Usuń" />
+   </children>
+</AnchorPane>
