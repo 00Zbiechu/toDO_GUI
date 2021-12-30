@@ -6,12 +6,12 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="237.0" prefWidth="378.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pliki.todo_gui.SaveController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="237.0" prefWidth="378.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pliki.todo_gui.SaveController">
    <children>
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="57.0" layoutY="33.0" prefHeight="16.0" prefWidth="297.0" text="Podaj ściężkę, w której zostanie zapisany plik" />
-      <Separator layoutX="106.0" layoutY="62.0" prefWidth="200.0" />
-      <Label fx:id="message" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="103.0" prefHeight="16.0" prefWidth="378.0" textFill="RED" />
-      <Button layoutX="159.0" layoutY="189.0" mnemonicParsing="false" onAction="#saveAction" text="Zapisz" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutY="33.0" prefHeight="18.0" prefWidth="378.0" text="Podaj ściężkę, w której zostanie zapisany plik" />
+      <Separator layoutX="89.0" layoutY="63.0" prefWidth="200.0" />
+      <Label fx:id="message" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="103.0" prefHeight="16.0" prefWidth="378.0" style="-fx-text-fill: red;" textFill="RED" />
+      <Button layoutX="155.0" layoutY="175.0" mnemonicParsing="false" onAction="#saveAction" text="Zapisz" />
       <TextField fx:id="path" layoutX="70.0" layoutY="130.0" prefHeight="24.0" prefWidth="239.0" />
    </children>
 </AnchorPane>

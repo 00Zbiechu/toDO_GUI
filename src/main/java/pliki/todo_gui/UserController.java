@@ -36,14 +36,11 @@ public class UserController {
 
 
 
-    //Set & GET
+    //Set
     public void setUserName(String nameOfUser){
         name=nameOfUser;
     }
 
-    public String getUserName(){
-        return  name;
-    }
 
 
 

@@ -1,0 +1,50 @@
+.root{
+    -fx-background-color:"#191414";
+}
+
+.topmessage{
+    -fx-font-size: 18px;
+    -fx-stroke: black;
+    -fx-font-weight: bold;
+    -fx-text-fill: "#FFFFFF";
+}
+
+
+.nameofuser{
+
+    -fx-font-size: 14px;
+    -fx-stroke: black;
+    -fx-font-weight: bold;
+    -fx-text-fill: "#1DB954";
+
+}
+
+.label{
+
+        -fx-font-size: 14px;
+        -fx-stroke: black;
+        -fx-font-weight: bold;
+        -fx-text-fill: "#FFFFFF";
+}
+
+.error{
+          -fx-font-size: 12px;
+          -fx-stroke: black;
+          -fx-font-weight: normal;
+          -fx-text-fill: "red";
+}
+
+
+.button{
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: "#1DB954";
+}
+
+
+.activity{
+
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+
+}

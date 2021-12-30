@@ -45,14 +45,11 @@ public class DateController {
         nameOfUser.setText(username);
     }
 
-    //Set & GET
+    //Set
     public void setDate(LocalDate dateOfActivity){
         date = dateOfActivity;
     }
 
-    public LocalDate getDate(){
-        return chooseDate.getValue();
-    }
 
 
     public boolean validator(LocalDate date){

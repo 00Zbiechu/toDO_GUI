@@ -7,15 +7,15 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pliki.todo_gui.DateController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pliki.todo_gui.DateController">
     <children>
-        <Text layoutX="126.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Podaj datę, dla której wprowadzisz aktywności" textAlignment="CENTER" wrappingWidth="348.0" />
-        <Text fx:id="nameOfUser" layoutX="52.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="497.0" />
-        <Separator layoutX="190.0" layoutY="144.0" prefWidth="200.0" />
-        <DatePicker fx:id="chooseDate" layoutX="191.0" layoutY="200.0" promptText="Wybierz datę">
+        <Text fill="WHITE" layoutX="-1.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="topmessage" text="Podaj datę, dla której wprowadzisz aktywności" textAlignment="CENTER" wrappingWidth="600.0" />
+        <Text fx:id="nameOfUser" fill="#1db954" layoutX="53.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="nameofuser" text="Test" textAlignment="CENTER" wrappingWidth="497.0" />
+        <Separator layoutX="199.0" layoutY="130.0" prefWidth="200.0" />
+        <DatePicker fx:id="chooseDate" layoutX="203.0" layoutY="176.0" promptText="Wybierz datę">
          <cursor>
             <Cursor fx:constant="DEFAULT" />
          </cursor></DatePicker>
-        <Button layoutX="249.0" layoutY="250.0" mnemonicParsing="false" onAction="#confirmDate" text="Potwierdź" />
+        <Button layoutX="252.0" layoutY="236.0" mnemonicParsing="false" onAction="#confirmDate" text="Potwierdź" />
     </children>
 </AnchorPane>

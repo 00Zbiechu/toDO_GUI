@@ -8,17 +8,17 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="237.0" prefWidth="379.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pliki.todo_gui.EditController">
+<AnchorPane prefHeight="237.0" prefWidth="379.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pliki.todo_gui.EditController">
    <children>
-      <Label alignment="CENTER" layoutY="23.0" prefHeight="16.0" prefWidth="379.0" text="Wprwoadź numer akcji do edycji oraz nowe dane" />
+      <Label alignment="CENTER" layoutY="23.0" prefHeight="16.0" prefWidth="379.0" text="Wprwoadź nr akcji do edycji oraz nowe dane" />
       <Separator layoutX="90.0" layoutY="56.0" prefWidth="200.0" />
-      <Label fx:id="message" alignment="CENTER" contentDisplay="CENTER" layoutX="11.0" layoutY="83.0" prefHeight="16.0" prefWidth="378.0" textFill="RED" />
-      <Text layoutX="101.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Treść [20 znaków]">
+      <Label fx:id="message" alignment="CENTER" contentDisplay="CENTER" layoutX="11.0" layoutY="83.0" prefHeight="16.0" prefWidth="378.0" style="-fx-text-fill: red;" textFill="RED" />
+      <Text fill="WHITE" layoutX="101.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Treść [20 znaków]">
          <font>
             <Font size="12.0" />
          </font>
       </Text>
-      <Text layoutX="254.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Czas [0-23] : [0-59]">
+      <Text fill="WHITE" layoutX="254.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Czas [0-23] : [0-59]">
          <font>
             <Font size="12.0" />
          </font>
@@ -26,9 +26,9 @@
       <TextField fx:id="content" layoutX="67.0" layoutY="144.0" prefHeight="24.0" prefWidth="179.0" />
       <TextField fx:id="hour" layoutX="258.0" layoutY="144.0" prefHeight="24.0" prefWidth="48.0" />
       <TextField fx:id="minutes" layoutX="323.0" layoutY="144.0" prefHeight="24.0" prefWidth="48.0" />
-      <Button layoutX="171.0" layoutY="194.0" mnemonicParsing="false" onAction="#editAction" text="Edytuj" />
-      <Text layoutX="312.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text=":" />
+      <Button layoutX="160.0" layoutY="187.0" mnemonicParsing="false" onAction="#editAction" text="Edytuj" />
+      <Text fill="WHITE" layoutX="312.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text=":" />
       <TextField fx:id="numberOfAction" layoutX="14.0" layoutY="144.0" prefHeight="24.0" prefWidth="48.0" />
-      <Text layoutX="13.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nr akcji" />
+      <Text fill="WHITE" layoutX="13.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nr akcji" />
    </children>
 </AnchorPane>

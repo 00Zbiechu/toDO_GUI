@@ -2,6 +2,8 @@ package pliki.todo_gui;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
@@ -14,7 +16,8 @@ public class Main extends Application {
         try {
 
             FXMLLoader loader = new FXMLLoader(this.getClass().getResource("ViewUsername.fxml"));
-            Scene scene = new Scene(loader.load());
+            Parent root = loader.load();
+            Scene scene = new Scene(root);
             stage.setScene(scene);
                 stage.setTitle("toDO");
                 stage.setResizable(false);

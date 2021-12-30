@@ -8,17 +8,17 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="237.0" prefWidth="378.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pliki.todo_gui.AddController">
+<AnchorPane prefHeight="237.0" prefWidth="378.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pliki.todo_gui.AddController">
    <children>
-      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="47.0" layoutY="23.0" prefHeight="16.0" prefWidth="297.0" text="Wprowadź nazwę i czas nowej aktywności" />
-      <Separator layoutX="96.0" layoutY="52.0" prefWidth="200.0" />
-      <Label fx:id="message" alignment="CENTER" contentDisplay="CENTER" layoutX="1.0" layoutY="73.0" prefHeight="16.0" prefWidth="378.0" textFill="RED" />
-      <Text layoutX="57.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Treść [20 znaków]">
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-1.0" layoutY="23.0" prefHeight="21.0" prefWidth="378.0" text="Wprowadź nazwę i czas nowej aktywności" />
+      <Separator layoutX="96.0" layoutY="55.0" prefWidth="200.0" />
+      <Label fx:id="message" alignment="CENTER" contentDisplay="CENTER" layoutX="1.0" layoutY="73.0" prefHeight="16.0" prefWidth="378.0" style="-fx-text-fill: red;" textFill="RED" />
+      <Text fill="WHITE" layoutX="57.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Treść [20 znaków]">
          <font>
             <Font size="12.0" />
          </font>
       </Text>
-      <Text layoutX="220.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Czas [0-23] : [0-59]">
+      <Text fill="WHITE" layoutX="220.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Czas [0-23] : [0-59]">
          <font>
             <Font size="12.0" />
          </font>

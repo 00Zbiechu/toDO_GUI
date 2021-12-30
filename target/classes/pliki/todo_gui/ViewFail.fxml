@@ -4,10 +4,10 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="237.0" prefWidth="378.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pliki.todo_gui.FailController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="237.0" prefWidth="378.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pliki.todo_gui.FailController">
    <children>
       <Label alignment="CENTER" contentDisplay="CENTER" layoutY="71.0" prefHeight="16.0" prefWidth="378.0" text="Coś poszło nie tak!" textAlignment="CENTER" />
-      <Label fx:id="labelForError" alignment="CENTER" contentDisplay="CENTER" layoutY="103.0" prefHeight="16.0" prefWidth="378.0" textAlignment="CENTER" textFill="RED" />
-      <Button layoutX="154.0" layoutY="140.0" mnemonicParsing="false" onAction="#closeWindow" text="Zamknij" />
+      <Label fx:id="labelForError" alignment="CENTER" contentDisplay="CENTER" layoutY="103.0" prefHeight="16.0" prefWidth="378.0" styleClass="error" textAlignment="CENTER" textFill="RED" />
+      <Button layoutX="148.0" layoutY="140.0" mnemonicParsing="false" onAction="#closeWindow" text="Zamknij" />
    </children>
 </AnchorPane>
