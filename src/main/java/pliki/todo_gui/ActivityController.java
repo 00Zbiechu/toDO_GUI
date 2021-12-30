@@ -204,12 +204,14 @@ public class ActivityController {
 
         try{
 
-            PrintWriter zapis = new PrintWriter(where+"/Zadania.txt");
+            PrintWriter zapis = new PrintWriter(where+"Zadania.txt");
             for(int i=0;i<10;i++){
 
                 zapis.println(actions[i]+"\n");
 
             }
+
+            zapis.close();
 
         }
         catch (Exception e){

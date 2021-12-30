@@ -12,6 +12,6 @@
       <Separator layoutX="106.0" layoutY="62.0" prefWidth="200.0" />
       <Label fx:id="message" alignment="CENTER" contentDisplay="CENTER" layoutX="10.0" layoutY="103.0" prefHeight="16.0" prefWidth="378.0" textFill="RED" />
       <Button layoutX="159.0" layoutY="189.0" mnemonicParsing="false" onAction="#saveAction" text="Zapisz" />
-      <TextField fx:id="path" layoutX="80.0" layoutY="142.0" prefHeight="24.0" prefWidth="239.0" />
+      <TextField fx:id="path" layoutX="70.0" layoutY="130.0" prefHeight="24.0" prefWidth="239.0" />
    </children>
 </AnchorPane>
