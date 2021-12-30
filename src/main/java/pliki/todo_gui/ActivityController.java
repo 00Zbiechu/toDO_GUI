@@ -37,10 +37,12 @@ public class ActivityController {
 
 
     //Var
-    public String[] actions= new String[10];
-    public byte currentAction = 0;
+    String[] actions= new String[10];
+    byte currentAction = 0;
 
-
+    //Var for save
+    String name;
+    LocalDate date;
 
 
     public void addToCurrentAction(){
@@ -72,6 +74,9 @@ public class ActivityController {
 
     public void setWelcome(String name,LocalDate date){
         hello.setText("Witaj użytkowniku "+name+", edytujesz ustawienia dla "+date);
+        this.name=name;
+        this.date=date;
+
     }
 
 
@@ -194,17 +199,18 @@ public class ActivityController {
                 SaveController saveController = loader.getController();
                 loader.setController(saveController);
         newStage.showAndWait();
-                saveNewAction(saveController.getPathToFile());
-
+                saveNewAction(saveController.getPathToFile(),name,date);
 
     }
 
     //Set save
-    public void saveNewAction(String where){
+    public void saveNewAction(String where,String name,LocalDate date){
 
         try{
 
             PrintWriter zapis = new PrintWriter(where+"Zadania.txt");
+            zapis.println("Zadania dla użytkownika "+name+", ustawienia dla "+date+"\n");
+
             for(int i=0;i<10;i++){
 
                 zapis.println(actions[i]+"\n");
@@ -222,10 +228,6 @@ public class ActivityController {
 
 
 
-
-    public String[] getActions(){
-        return actions;
-    }
 
 
 }

@@ -34,6 +34,8 @@ public class UserController {
     String name;
 
 
+
+
     //Set & GET
     public void setUserName(String nameOfUser){
         name=nameOfUser;
@@ -79,6 +81,7 @@ public class UserController {
 
             DateController dateController = loader.getController();
             dateController.displayName(name);
+
 
         }
 
