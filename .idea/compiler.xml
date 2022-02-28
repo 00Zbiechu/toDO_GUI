@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="toDO_GUI" target="17" />
+      <module name="toDO_GUI" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>
