@@ -15,18 +15,14 @@ public class DeleteController {
 
     //FXML
     @FXML
-    TextField numberToDelete;
+    private TextField numberToDelete;
 
     @FXML
-    Label message;
-
-    //GUI
-    Stage stage;
-    Node node;
+    private Label message;
 
 
     //Var
-    byte deleteNumber;
+    private byte deleteNumber;
 
 
     //Number SET & GET
@@ -44,8 +40,9 @@ public class DeleteController {
 
                 setDeleteNumber((byte) Integer.parseInt(numberToDelete.getText()));
 
-                node = (Node) event.getSource();
-                stage = (Stage) node.getScene().getWindow();
+                Node node = (Node) event.getSource();
+                //GUI
+                Stage stage = (Stage) node.getScene().getWindow();
                 stage.close();
 
             }else{

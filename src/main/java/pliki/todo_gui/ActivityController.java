@@ -21,28 +21,28 @@ public class ActivityController {
 
     //FXML
     @FXML
-    Text hello;
+    private Text hello;
 
     @FXML
-    TextArea activityList;
+    private TextArea activityList;
 
     @FXML
-    Label message;
+    private Label message;
 
 
     //GUI
-    Stage newStage = new Stage();
-    Scene scene;
-    Parent root;
+    private final Stage newStage = new Stage();
+    private Scene scene;
+    private Parent root;
 
 
     //Var
-    String[] actions= new String[10];
-    byte currentAction = 0;
+    private final String[] actions= new String[10];
+    private byte currentAction = 0;
 
     //Var for save
-    String name;
-    LocalDate date;
+    private String name;
+    private LocalDate date;
 
 
     public void addToCurrentAction(){

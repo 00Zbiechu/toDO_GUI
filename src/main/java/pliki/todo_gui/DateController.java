@@ -23,20 +23,15 @@ public class DateController {
 
     //FXML
     @FXML
-    Text nameOfUser;
+    private Text nameOfUser;
     @FXML
-    DatePicker chooseDate;
+    private DatePicker chooseDate;
 
-    //GUI
-    Stage stage;
     //Must be created, to be closed if user will write correct answer
-    Stage forErrorStage = new Stage();
-    Scene scene;
-    Parent root;
-    Node node;
+    private final Stage forErrorStage = new Stage();
 
     //Var
-    LocalDate date;
+    private LocalDate date;
 
 
 
@@ -70,6 +65,8 @@ public class DateController {
 
     public void confirmDate(ActionEvent event) throws IOException {
 
+        Scene scene;
+        Parent root;
         if(validator(chooseDate.getValue())){
 
             forErrorStage.close();
@@ -77,8 +74,9 @@ public class DateController {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("ViewMenu.fxml"));
             root = loader.load();
             scene = new Scene(root);
-            node = (Node) event.getSource();
-            stage = (Stage) node.getScene().getWindow();
+            Node node = (Node) event.getSource();
+            //GUI
+            Stage stage = (Stage) node.getScene().getWindow();
             stage.setScene(scene);
             stage.show();
 

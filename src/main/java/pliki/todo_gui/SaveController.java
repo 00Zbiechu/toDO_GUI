@@ -16,17 +16,13 @@ public class SaveController {
 
     //FXML
     @FXML
-    TextField path;
+    private TextField path;
 
     @FXML
-    Label message;
-
-    //GUI
-    Stage stage;
-    Node node;
+    private Label message;
 
     //VAR
-    String pathToFile;
+    private String pathToFile;
 
 
     //Content SET & GET
@@ -43,8 +39,9 @@ public class SaveController {
 
             setPath(path.getText());
 
-            node = (Node) event.getSource();
-            stage = (Stage) node.getScene().getWindow();
+            Node node = (Node) event.getSource();
+            //GUI
+            Stage stage = (Stage) node.getScene().getWindow();
             stage.close();
 
         }catch (Exception e){

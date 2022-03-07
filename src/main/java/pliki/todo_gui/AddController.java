@@ -16,26 +16,22 @@ public class AddController{
 
     //FXML
     @FXML
-    TextField content;
+    private TextField content;
 
     @FXML
-    TextField hour;
+    private TextField hour;
 
     @FXML
-    TextField minutes;
+    private TextField minutes;
 
     @FXML
-    Label message;
-
-    //GUI
-    Stage stage;
-    Node node;
+    private Label message;
 
 
     //Var
-    String newActionContent;
-    String newActionHour;
-    String newActionMinutes;
+    private String newActionContent;
+    private String newActionHour;
+    private String newActionMinutes;
 
 
     //Content SET & GET
@@ -72,8 +68,9 @@ public class AddController{
                             setNewActionMinutes(minutes.getText());
 
 
-                            node = (Node) event.getSource();
-                            stage = (Stage) node.getScene().getWindow();
+                            Node node = (Node) event.getSource();
+                            //GUI
+                            Stage stage = (Stage) node.getScene().getWindow();
                             stage.close();
 
 

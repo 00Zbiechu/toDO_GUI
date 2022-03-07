@@ -9,17 +9,14 @@ import javafx.stage.Stage;
 
 public class FailController {
 
-    Stage stage;
-    Node node;
-
     @FXML
-    Label labelForError;
+    private Label labelForError;
 
 
     public void closeWindow(ActionEvent event){
 
-        node = (Node)event.getSource();
-        stage = (Stage) node.getScene().getWindow();
+        Node node = (Node) event.getSource();
+        Stage stage = (Stage) node.getScene().getWindow();
         stage.close();
 
     }

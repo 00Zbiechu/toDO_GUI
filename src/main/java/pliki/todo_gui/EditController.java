@@ -14,31 +14,26 @@ public class EditController {
 
     //FXML
     @FXML
-    TextField numberOfAction;
+    private TextField numberOfAction;
 
     @FXML
-    TextField content;
+    private TextField content;
 
     @FXML
-    TextField hour;
+    private TextField hour;
 
     @FXML
-    TextField minutes;
+    private TextField minutes;
 
     @FXML
-    Label message;
-
-
-    //GUI
-    Stage stage;
-    Node node;
+    private Label message;
 
 
     //Var
-    byte editNumber;
-    String editActionContent;
-    String editActionHour;
-    String editActionMinutes;
+    private byte editNumber;
+    private String editActionContent;
+    private String editActionHour;
+    private String editActionMinutes;
 
 
     //Number SET & GET
@@ -85,8 +80,9 @@ public class EditController {
                                 setEditActionMinutes(minutes.getText());
 
 
-                                node = (Node) event.getSource();
-                                stage = (Stage) node.getScene().getWindow();
+                                Node node = (Node) event.getSource();
+                                //GUI
+                                Stage stage = (Stage) node.getScene().getWindow();
                                 stage.close();
 
 

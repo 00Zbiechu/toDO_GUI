@@ -19,16 +19,11 @@ public class UserController {
 
     //FXML
     @FXML
-    TextField userName;
+    private TextField userName;
 
 
-    //GUI
-        Stage stage;
-        //Must be created, to be closed if user will write correct answer
-        Stage forErrorStage = new Stage();
-        Scene scene;
-        Parent root;
-        Node node;
+    //Must be created, to be closed if user will write correct answer
+        private final Stage forErrorStage = new Stage();
 
     //Var
     String name;
@@ -49,6 +44,8 @@ public class UserController {
 
        setUserName(userName.getText());
 
+        Scene scene;
+        Parent root;
         if(name.length()>20){
 
             FXMLLoader loader = new FXMLLoader(getClass().getResource("ViewFail.fxml"));
@@ -71,8 +68,9 @@ public class UserController {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("ViewDate.fxml"));
             root = loader.load();
             scene = new Scene(root);
-            node = (Node)event.getSource();
-            stage = (Stage) node.getScene().getWindow();
+            Node node = (Node) event.getSource();
+            //GUI
+            Stage stage = (Stage) node.getScene().getWindow();
             stage.setScene(scene);
             stage.show();
 
